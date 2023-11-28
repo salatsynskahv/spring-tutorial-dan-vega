@@ -2,9 +2,10 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:alpine
+    image: postgres:13.3
     ports:
       - "5432:5432"
     environment:
+      POSTGRES_DB: content-calendar-db
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: password
